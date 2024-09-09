@@ -225,7 +225,7 @@ class GToepOperator:
             M += toep[i]
         for idim in range(M.ndim):
             coef = (1.*M.shape[idim]-self.xp.arange(1,M.shape[idim]))/M.shape[idim]
-            coef_shape = np.ones(M.ndim,dtype=np.int)
+            coef_shape = np.ones(M.ndim,dtype=int)
             coef_shape[idim] = M.shape[idim] - 1
             coef = coef.reshape(tuple(coef_shape))
             s1 = [slice(None)]*M.ndim
