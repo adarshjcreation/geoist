@@ -100,7 +100,7 @@ def regular(area, shape, z=None):
     # for the columns
     arrays = np.meshgrid(ys, xs)[::-1]
     if z is not None:
-        arrays.append(z*np.ones(nx*ny, dtype=np.float))
+        arrays.append(z*np.ones(nx*ny, dtype=float))
     return [i.ravel() for i in arrays]
 
 
