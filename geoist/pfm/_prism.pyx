@@ -12,7 +12,7 @@ from libc.math cimport log, atan2, sqrt
 cimport numpy
 cimport cython
 
-DTYPE = numpy.float
+DTYPE = float
 ctypedef numpy.float_t DTYPE_T
 
 cdef inline double safe_atan2(double y, double x) nogil:
