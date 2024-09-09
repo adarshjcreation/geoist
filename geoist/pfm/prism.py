@@ -128,7 +128,7 @@ def potential(xp, yp, zp, prisms, dens=None):
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same length!")
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if prism is None or ('density' not in prism.props and dens is None):
             continue
@@ -176,7 +176,7 @@ def gx(xp, yp, zp, prisms, dens=None):
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same length!")
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if prism is None or ('density' not in prism.props and dens is None):
             continue
@@ -224,7 +224,7 @@ def gy(xp, yp, zp, prisms, dens=None):
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same length!")
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if prism is None or ('density' not in prism.props and dens is None):
             continue
@@ -272,7 +272,7 @@ def gz(xp, yp, zp, prisms, dens=None):
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same length!")
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if prism is None or ('density' not in prism.props and dens is None):
             continue
@@ -320,7 +320,7 @@ def gxx(xp, yp, zp, prisms, dens=None):
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same length!")
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if prism is None or ('density' not in prism.props and dens is None):
             continue
@@ -376,7 +376,7 @@ def gxy(xp, yp, zp, prisms, dens=None):
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same length!")
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if prism is None or ('density' not in prism.props and dens is None):
             continue
@@ -432,7 +432,7 @@ def gxz(xp, yp, zp, prisms, dens=None):
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same length!")
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if prism is None or ('density' not in prism.props and dens is None):
             continue
@@ -480,7 +480,7 @@ def gyy(xp, yp, zp, prisms, dens=None):
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same length!")
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if prism is None or ('density' not in prism.props and dens is None):
             continue
@@ -536,7 +536,7 @@ def gyz(xp, yp, zp, prisms, dens=None):
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same length!")
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if prism is None or ('density' not in prism.props and dens is None):
             continue
@@ -584,7 +584,7 @@ def gzz(xp, yp, zp, prisms, dens=None):
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same length!")
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if prism is None or ('density' not in prism.props and dens is None):
             continue
@@ -635,7 +635,7 @@ def tf(xp, yp, zp, prisms, inc, dec, pmag=None):
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same length!")
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     # Calculate the 3 components of the unit vector in the direction of the
     # regional field
     fx, fy, fz = giutils.dircos(inc, dec)
@@ -694,7 +694,7 @@ def bx(xp, yp, zp, prisms, pmag=None):
     if pmag is not None:
         mx, my, mz = pmag
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if (prism is None or
                 ('magnetization' not in prism.props and pmag is None)):
@@ -740,7 +740,7 @@ def by(xp, yp, zp, prisms, pmag=None):
     if pmag is not None:
         mx, my, mz = pmag
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if (prism is None or
                 ('magnetization' not in prism.props and pmag is None)):
@@ -786,7 +786,7 @@ def bz(xp, yp, zp, prisms, pmag=None):
     if pmag is not None:
         mx, my, mz = pmag
     size = len(xp)
-    res = numpy.zeros(size, dtype=numpy.float)
+    res = numpy.zeros(size, dtype=float)
     for prism in prisms:
         if (prism is None or
                 ('magnetization' not in prism.props and pmag is None)):
@@ -828,7 +828,7 @@ def kernelxx(xp, yp, zp, prism):
     """
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same shape!")
-    res = numpy.zeros(len(xp), dtype=numpy.float)
+    res = numpy.zeros(len(xp), dtype=float)
     x1, x2 = prism.x1, prism.x2
     y1, y2 = prism.y1, prism.y2
     z1, z2 = prism.z1, prism.z2
@@ -863,7 +863,7 @@ def kernelyy(xp, yp, zp, prism):
     """
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same shape!")
-    res = numpy.zeros(len(xp), dtype=numpy.float)
+    res = numpy.zeros(len(xp), dtype=float)
     x1, x2 = prism.x1, prism.x2
     y1, y2 = prism.y1, prism.y2
     z1, z2 = prism.z1, prism.z2
@@ -898,7 +898,7 @@ def kernelzz(xp, yp, zp, prism):
     """
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same shape!")
-    res = numpy.zeros(len(xp), dtype=numpy.float)
+    res = numpy.zeros(len(xp), dtype=float)
     x1, x2 = prism.x1, prism.x2
     y1, y2 = prism.y1, prism.y2
     z1, z2 = prism.z1, prism.z2
@@ -933,7 +933,7 @@ def kernelxy(xp, yp, zp, prism):
     """
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same shape!")
-    res = numpy.zeros(len(xp), dtype=numpy.float)
+    res = numpy.zeros(len(xp), dtype=float)
     x1, x2 = prism.x1, prism.x2
     y1, y2 = prism.y1, prism.y2
     z1, z2 = prism.z1, prism.z2
@@ -968,7 +968,7 @@ def kernelxz(xp, yp, zp, prism):
     """
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same shape!")
-    res = numpy.zeros(len(xp), dtype=numpy.float)
+    res = numpy.zeros(len(xp), dtype=float)
     x1, x2 = prism.x1, prism.x2
     y1, y2 = prism.y1, prism.y2
     z1, z2 = prism.z1, prism.z2
@@ -1003,7 +1003,7 @@ def kernelyz(xp, yp, zp, prism):
     """
     if xp.shape != yp.shape or xp.shape != zp.shape:
         raise ValueError("Input arrays xp, yp, and zp must have same shape!")
-    res = numpy.zeros(len(xp), dtype=numpy.float)
+    res = numpy.zeros(len(xp), dtype=float)
     x1, x2 = prism.x1, prism.x2
     y1, y2 = prism.y1, prism.y2
     z1, z2 = prism.z1, prism.z2
