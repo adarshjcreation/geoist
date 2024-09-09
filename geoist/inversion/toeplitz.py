@@ -90,7 +90,7 @@ def block_toep2_sym(a):
     A = np.empty((n1,n0,n1,n0))
     for i in range(n1):
         for j in range(n1):
-            A[i,:,j,:] = A1[np.int(np.abs(i-j))]
+            A[i,:,j,:] = A1[int(np.abs(i-j))]
     A.shape = (n0*n1,n0*n1)
     A = xp.asarray(A)
     
