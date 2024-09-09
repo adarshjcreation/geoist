@@ -1093,7 +1093,7 @@ typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
 /* "geoist/pfm/_prism.pyx":16
  * 
- * DTYPE = numpy.float
+ * DTYPE = float
  * ctypedef numpy.float_t DTYPE_T             # <<<<<<<<<<<<<<
  * 
  * cdef inline double safe_atan2(double y, double x) nogil:
@@ -15757,7 +15757,7 @@ if (!__Pyx_RefNanny) {
   /* "geoist/pfm/_prism.pyx":15
  * cimport cython
  * 
- * DTYPE = numpy.float             # <<<<<<<<<<<<<<
+ * DTYPE = float             # <<<<<<<<<<<<<<
  * ctypedef numpy.float_t DTYPE_T
  * 
  */
